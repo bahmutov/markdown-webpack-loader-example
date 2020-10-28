@@ -1,0 +1,9 @@
+const { getOptions } = require('loader-utils')
+
+module.exports = function (source) {
+  const options = getOptions(this)
+
+  // Apply some transformations to the source...
+
+  return `export default ${JSON.stringify(source)}`
+}
