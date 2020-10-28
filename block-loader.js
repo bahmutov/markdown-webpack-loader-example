@@ -11,5 +11,6 @@ module.exports = function (source) {
     throw new Error('Could not find code block')
   }
 
-  return `export default ${JSON.stringify(codeBlock.value)}`
+  return codeBlock.value
+  // return `export default ${JSON.stringify(codeBlock.value)}`
 }
