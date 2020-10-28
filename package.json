@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack",
     "build:markdown-loader": "webpack --config webpack.markdown-loader.js",
-    "build:index": "webpack --config webpack.index.js"
+    "build:index": "webpack --config webpack.index.js",
+    "build:plain": "webpack --config webpack.plain.js"
   },
   "repository": {
     "type": "git",
