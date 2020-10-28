@@ -1,8 +1,9 @@
 {
-  "name": "fiddle-webpack-loader",
+  "name": "markdown-webpack-loader-example",
   "version": "1.0.0",
-  "description": "",
+  "description": "Example Webpack loader extracting JavaScript blocks from Markdown files",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "build": "webpack",
     "build:markdown-loader": "webpack --config webpack.markdown-loader.js",

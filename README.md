@@ -1,2 +1,2 @@
-# fiddle-webpack-loader
-> Example Webpack loader extract fiddle comments from Markdown files
+# markdown-webpack-loader-example
+> Example Webpack loader extracting JavaScript blocks from Markdown files
