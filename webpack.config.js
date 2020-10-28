@@ -6,4 +6,17 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
   },
+  module: {
+    rules: [
+      {
+        test: /\.md$/,
+        use: {
+          loader: 'raw-loader',
+          options: {
+            esModule: false,
+          },
+        },
+      },
+    ],
+  },
 }
