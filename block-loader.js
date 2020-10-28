@@ -1,9 +1,15 @@
-const { getOptions } = require('loader-utils')
+const { parse } = require('@textlint/markdown-to-ast')
 
 module.exports = function (source) {
-  const options = getOptions(this)
+  const ast = parse(source)
+  console.log('markdown ast')
+  console.log(ast)
+  const codeBlock = ast.children.find(
+    (node) => node.type === 'CodeBlock' && node.lang === 'js',
+  )
+  if (!codeBlock) {
+    throw new Error('Could not find code block')
+  }
 
-  // Apply some transformations to the source...
-
-  return `export default ${JSON.stringify(source)}`
+  return `export default ${JSON.stringify(codeBlock.value)}`
 }
